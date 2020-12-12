@@ -22,22 +22,22 @@ export const selectHomeContainer = () =>
     substate => substate
   );
 
-export const selectReposData = () =>
+export const selectArtsData = () =>
   createSelector(
     selectHomeContainerDomain,
-    substate => get(substate, 'reposData', null)
+    substate => get(substate, 'artsData', null)
   );
 
-export const selectReposError = () =>
+export const selectArtsError = () =>
   createSelector(
     selectHomeContainerDomain,
-    substate => get(substate, 'reposError', null)
+    substate => get(substate, 'artsError', null)
   );
 
-export const selectRepoName = () =>
+export const selectArtName = () =>
   createSelector(
     selectHomeContainerDomain,
-    substate => get(substate, 'repoName', null)
+    substate => get(substate, 'artName', null)
   );
 
 export default selectHomeContainer;

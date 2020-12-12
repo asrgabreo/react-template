@@ -12,22 +12,22 @@ describe('HomContainer reducer tests', () => {
   });
 
   it('should return the initial state when an action of type FETCH_USER is dispatched', () => {
-    const repoName = 'Mohammed Ali Chherawalla';
-    const expectedResult = { ...state, repoName };
+    const artName = 'Mohammed Ali Chherawalla';
+    const expectedResult = { ...state, artName };
     expect(
       homeContainerReducer(state, {
-        type: homeContainerTypes.REQUEST_GET_GITHUB_REPOS,
-        repoName
+        type: homeContainerTypes.REQUEST_GET_ITUNE_ARTS,
+        artName
       })
     ).toEqual(expectedResult);
   });
 
   it('should ensure that the user data is present and userLoading = false when FETCH_USER_SUCCESS is dispatched', () => {
     const data = { name: 'Mohammed Ali Chherawalla' };
-    const expectedResult = { ...state, reposData: data };
+    const expectedResult = { ...state, artsData: data };
     expect(
       homeContainerReducer(state, {
-        type: homeContainerTypes.SUCCESS_GET_GITHUB_REPOS,
+        type: homeContainerTypes.SUCCESS_GET_ITUNE_ARTS,
         data
       })
     ).toEqual(expectedResult);
@@ -35,10 +35,10 @@ describe('HomContainer reducer tests', () => {
 
   it('should ensure that the userErrorMessage has some data and userLoading = false when FETCH_USER_FAILURE is dispatched', () => {
     const error = 'something_went_wrong';
-    const expectedResult = { ...state, reposError: error };
+    const expectedResult = { ...state, artsError: error };
     expect(
       homeContainerReducer(state, {
-        type: homeContainerTypes.FAILURE_GET_GITHUB_REPOS,
+        type: homeContainerTypes.FAILURE_GET_ITUNE_ARTS,
         error
       })
     ).toEqual(expectedResult);

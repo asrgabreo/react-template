@@ -2,9 +2,9 @@ import NotFound from '@containers/NotFoundPage/Loadable';
 import HomeContainer from '@containers/HomeContainer/Loadable';
 import routeConstants from '@utils/routeConstants';
 export const routeConfig = {
-  repos: {
+  arts: {
     component: HomeContainer,
-    ...routeConstants.repos
+    ...routeConstants.arts
   },
   notFoundPage: {
     component: NotFound,

@@ -1,5 +1,5 @@
 export default {
-  repos: {
+  arts: {
     route: '/',
     props: {
       maxwidth: 500,

@@ -34,7 +34,7 @@ exports[`<HomeContainer /> tests should render and match the snapshot 1`] = `
             <div
               class="ant-card-head-title"
             >
-              Repository Search
+              Artist Search
             </div>
           </div>
         </div>
@@ -45,7 +45,7 @@ exports[`<HomeContainer /> tests should render and match the snapshot 1`] = `
             class="T__StyledText-gjlic1-0 eEFXad"
             data-testid="t"
           >
-            Get details of repositories
+            Get details of artists
           </p>
           <span
             class="ant-input-search ant-input-affix-wrapper"
@@ -97,7 +97,7 @@ exports[`<HomeContainer /> tests should render and match the snapshot 1`] = `
             <div
               class="ant-card-head-title"
             >
-              Repository List
+              Artist List
             </div>
           </div>
         </div>
@@ -108,7 +108,7 @@ exports[`<HomeContainer /> tests should render and match the snapshot 1`] = `
             class="T__StyledText-gjlic1-0 cbAvsY"
             data-testid="t"
           >
-            Search for a repository by entering it's name in the search box
+            Search for an artist by entering it's name in the search box
           </p>
         </div>
       </div>

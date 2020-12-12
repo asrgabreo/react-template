@@ -1,21 +1,21 @@
-import { selectHomeContainer, selectRepoName, selectReposData, selectReposError } from '../selectors';
+import { selectHomeContainer, selectArtName, selectArtsData, selectArtsError } from '../selectors';
 
 describe('HomeContainer selector tests', () => {
   let mockedState;
-  let repoName;
-  let reposData;
-  let reposError;
+  let artName;
+  let artsData;
+  let artsError;
 
   beforeEach(() => {
-    repoName = 'mac';
-    reposData = { totalCount: 1, items: [{ repoName }] };
-    reposError = 'There was some error while fetching the repository details';
+    artName = 'mac';
+    artsData = { resultCount: 1, results: [{ artName }] };
+    artsError = 'There was some error while fetching the artist details';
 
     mockedState = {
       homeContainer: {
-        repoName,
-        reposData,
-        reposError
+        artName,
+        artsData,
+        artsError
       }
     };
   });
@@ -23,18 +23,18 @@ describe('HomeContainer selector tests', () => {
     const homeContainerSelector = selectHomeContainer();
     expect(homeContainerSelector(mockedState)).toEqual(mockedState.homeContainer);
   });
-  it('should select the repoName', () => {
-    const repoSelector = selectRepoName();
-    expect(repoSelector(mockedState)).toEqual(repoName);
+  it('should select the artName', () => {
+    const artSelector = selectArtName();
+    expect(artSelector(mockedState)).toEqual(artName);
   });
 
-  it('should select reposData', () => {
-    const reposDataSelector = selectReposData();
-    expect(reposDataSelector(mockedState)).toEqual(reposData);
+  it('should select artsData', () => {
+    const artsDataSelector = selectArtsData();
+    expect(artsDataSelector(mockedState)).toEqual(artsData);
   });
 
-  it('should select the reposError', () => {
-    const reposErrorSelector = selectReposError();
-    expect(reposErrorSelector(mockedState)).toEqual(reposError);
+  it('should select the artsError', () => {
+    const artsErrorSelector = selectArtsError();
+    expect(artsErrorSelector(mockedState)).toEqual(artsError);
   });
 });
